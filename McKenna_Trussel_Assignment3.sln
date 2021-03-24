@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "McKenna_Trussel_Assignment3", "McKenna_Trussel_Assignment3.csproj", "{73F2FD0F-5A12-4B52-88F6-E140A9225F13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73F2FD0F-5A12-4B52-88F6-E140A9225F13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73F2FD0F-5A12-4B52-88F6-E140A9225F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73F2FD0F-5A12-4B52-88F6-E140A9225F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73F2FD0F-5A12-4B52-88F6-E140A9225F13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50BDF7E4-747C-484A-A964-4EDB53860823}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model McKenna_Trussel_Assignment3.Models.ApplicationResponse
+
+
+
+<div>
+    <h2>Your movie was successfully added!</h2>
+    <br />
+    <br />
+    @if (Model.Title == "Independence Day")
+    {
+        @:Sorry, Joel thinks that Independence Day beats Rocky IV as the “Most American Movie Ever Made” and that is not true so it will not be added to the movie list.
+    }
+    else
+    {
+        @:Great movie addition!
+    }
+    <br />
+    <br />
+</div>
+
+<div>
+    Click <a asp-action="Movie">here</a> to add another movie.
+    <br />
+    <br />
+    Click <a asp-action="MovieList">here</a> to see the movie list.
+</div>

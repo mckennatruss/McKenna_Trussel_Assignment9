@@ -1,0 +1,67 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "List of Entered Movies";
+}
+
+@model IEnumerable<ApplicationResponse>
+
+
+
+
+<table class="center table table-hover">
+    <thead class="text-center bg-secondary text-info">
+        <tr><th>Category</th><th>Title</th><th>Year</th><th>Director</th><th>Rating</th><th>Edited</th><th>Lent</th><th>Notes</th><th>Remove</th><th>Update</th></tr>
+    </thead>
+
+    <tbody class="center border-info text-center">
+        @foreach (var x in Model)
+        {
+            @if (x.Title == "Independence Day")
+            {
+
+            }
+            else
+            {
+        <tr class="text-info table-bordered- justify-content-md-center">
+            <td class="text-center justify-content-center">@x.Category</td>
+            <td class="text-center justify-content-center">@x.Title</td>
+            <td class="text-center justify-content-center">@x.Year</td>
+            <td class="text-center justify-content-center">@x.Director</td>
+            <td class="text-center justify-content-center">@x.Rating</td>
+            <td class="text-center justify-content-center">@x.Edited</td>
+            <td class="text-center justify-content-center">@x.Lent</td>
+            <td class="text-center justify-content-center">@x.Notes</td>
+            <td class="text-center justify-content-center">
+                <form asp-action="MovieList" method="post">
+                    <input type="hidden" name="MovieId"
+                           value="@x.MovieID" />
+                    <button type="submit" class="btn btn-sm btn-info">
+                        Remove
+                    </button>
+                </form>
+            </td>
+            @*<td>
+                <a asp-action="EditMovie" asp-route-movieid="@x.MovieID">Update</a>
+            </td>*@
+            <td class="text-center justify-content-center">
+            <form asp-action="EditMovie" method="get" asp-route-movieid="@x.MovieID">
+                <input type="hidden" name="MovieId"
+                       value="@x.MovieID" />
+                <button type="submit" class="btn btn-sm btn-info">
+                    Update
+                </button>
+            </form>
+        </td>
+        </tr>
+            }
+
+        }
+    </tbody>
+</table>
+<br />
+<br />
+<br />
+
+<p class="text-info">Click <a asp-action="Movie">here</a> to add another movie.</p>
